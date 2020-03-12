@@ -1,9 +1,91 @@
 .body {
-  background-color: red;
+  font-family: Helvetica;
+  color: white;
+  background-color: black;
+  width: 1400px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 2fr;
 }
 
-svg {
-  fill: white;
+.secondgrid {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr;
+  border: blue 1px dotted;
+}
+
+.sidebar {
+  background-color: greenyellow;
+  grid-area: 1/1/2/2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 30px;
+  color: white;
+}
+
+.mainnav {
+  display: flex;
+  flex-direction: column;
+}
+
+.spotify {
+  height: 50px;
+  width: 170px;
+}
+
+.maincontent {
+  grid-area: 1/2/2/4;
+  position: scroll;
+  position: sticky;
+  top: 100px;
+  background-color: pink;
+}
+
+ul {
+  padding-left: 2px;
+}
+
+li {
+  padding-right: px;
+  margin: 0px;
+  list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+  border: black 1px solid;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a::after {
+  list-style: none;
+}
+
+.navlogo {
+  margin-top: 5px;
+  border: red 1px solid;
+  height: 40px;
+  width: 40px;
+}
+
+.header {
+  background-color: khaki;
+}
+
+footer {
+  background-color: khaki;
+  position: sticky;
+}
+
+img {
+  height: 20px;
+  width: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */
