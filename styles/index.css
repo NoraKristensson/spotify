@@ -1,77 +1,111 @@
 .body {
   font-family: Helvetica;
-  color: white;
+  color: #ffffff;
   background-color: black;
-  width: 1400px;
-  height: 700px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 2fr;
+  grid-template-rows: 6fr 1fr;
 }
 
-.secondgrid {
+.firstgrid {
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr;
   border: blue 1px dotted;
 }
 
 .sidebar {
-  background-color: greenyellow;
-  grid-area: 1/1/2/2;
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
   padding-top: 30px;
-  color: white;
+  padding-bottom: 40px;
+  padding-right: 0px;
+  margin-right: 0px;
+  color: #ffffff;
 }
 
 .mainnav {
   display: flex;
   flex-direction: column;
+  width: auto;
 }
 
 .spotify {
   height: 50px;
   width: 170px;
-}
-
-.maincontent {
-  grid-area: 1/2/2/4;
-  position: scroll;
-  position: sticky;
-  top: 100px;
-  background-color: pink;
+  margin-bottom: 20px;
 }
 
 ul {
   padding-left: 2px;
 }
 
+.navtext:hover {
+  opacity: 1;
+}
+
+.navtext {
+  color: #ffffff;
+  opacity: 0.5;
+  text-decoration: none;
+  width: 200px;
+  height: 20px;
+}
+
 li {
-  padding-right: px;
-  margin: 0px;
+  padding-bottom: 2px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 0;
   list-style: none;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold;
-  border: black 1px solid;
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-a::after {
-  list-style: none;
+  letter-spacing: 0.8px;
+  width: 200px;
+  border-radius: 10px;
+  text-align: none;
 }
 
 .navlogo {
-  margin-top: 5px;
-  border: red 1px solid;
-  height: 40px;
-  width: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+}
+
+.bottom-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navtext-bottom {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  padding-bottom: 4px;
+  color: #ffffff;
+  opacity: 0.5;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navtext-bottom:hover {
+  text-decoration: underline;
+  color: #ffffff;
+  opacity: 0.5;
+  width: 60px;
+}
+
+.miniborder {
+  width: 20px;
+  border-bottom: #ffffff 1px solid;
+  opacity: 0.5;
+  margin-bottom: 15px;
 }
 
 .header {
@@ -86,6 +120,10 @@ footer {
 img {
   height: 20px;
   width: 20px;
+}
+
+.maincontent {
+  background-color: #1d1c1c;
 }
 
 /*# sourceMappingURL=index.css.map */
