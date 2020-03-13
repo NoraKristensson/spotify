@@ -2,6 +2,8 @@
   font-family: Helvetica;
   color: #ffffff;
   background-color: black;
+  max-width: 768px;
+  max-height: 600px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 6fr 1fr;
@@ -85,7 +87,7 @@ li {
 }
 
 .navtext-bottom {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1.5px;
   padding-bottom: 4px;
   color: #ffffff;
@@ -108,8 +110,43 @@ li {
   margin-bottom: 15px;
 }
 
+.maincontent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 15fr;
+}
+
 .header {
+  position: relative;
   background-color: khaki;
+  padding: 20px;
+}
+
+.search {
+  box-sizing: border-box;
+  border-radius: 30px;
+  line-height: 16px;
+  font-size: 10px;
+  min-width: 80px;
+  min-height: 30px;
+  padding-left: 30px;
+  border: none;
+  letter-spacing: 1px;
+  color: #5c5b5b;
+}
+
+input::placeholder {
+  box-sizing: border-box;
+  color: #5c5b5b;
+  letter-spacing: 1px;
+}
+
+.search-black {
+  position: absolute;
+  top: 26px;
+  left: 27px;
+  width: 17px;
+  height: 17px;
 }
 
 footer {
@@ -117,13 +154,9 @@ footer {
   position: sticky;
 }
 
-img {
-  height: 20px;
-  width: 20px;
-}
-
-.maincontent {
+.gridcard {
   background-color: #1d1c1c;
+  overflow: scroll;
 }
 
 /*# sourceMappingURL=index.css.map */

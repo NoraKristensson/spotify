@@ -1,11 +1,13 @@
 $font-color: #ffffff;
 $main-grid: rgb(29, 28, 28);
+$paceholder-text: #5c5b5b;
 
 .body {
   font-family: Helvetica;
   color: $font-color;
   background-color: black;
-  // width: 1400px;
+  max-width: 768px;
+  max-height: 600px;
   // height: 700px;
 
   display: grid;
@@ -19,6 +21,8 @@ $main-grid: rgb(29, 28, 28);
   grid-template-rows: 1fr;
   border: blue 1px dotted;
 }
+
+// --------------------------------sidebar
 
 .sidebar {
   background-color: black;
@@ -93,7 +97,7 @@ li {
 }
 
 .navtext-bottom {
-  font-size: 10px;
+  font-size: 12px;
 
   letter-spacing: 1.5px;
   padding-bottom: 4px;
@@ -117,23 +121,65 @@ li {
   margin-bottom: 15px;
 }
 
-.header {
-  background-color: khaki;
+// --------------------------------------maincontent
+
+.maincontent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 15fr;
 }
+
+// -------------------------------------header
+
+.header {
+  position: relative;
+  background-color: khaki;
+  padding: 20px;
+}
+
+.search {
+  box-sizing: border-box;
+  border-radius: 30px;
+  line-height: 16px;
+  font-size: 10px;
+  min-width: 80px;
+  min-height: 30px;
+  padding-left: 30px;
+  border: none;
+  letter-spacing: 1px;
+  color: $paceholder-text;
+}
+
+input::placeholder {
+  box-sizing: border-box;
+  color: $paceholder-text;
+  letter-spacing: 1px;
+}
+
+.search-black {
+  position: absolute;
+  top: 26px;
+  left: 27px;
+  width: 17px;
+  height: 17px;
+}
+
+// --------------------------------resten
 
 footer {
   background-color: khaki;
   position: sticky;
 }
 
-img {
-  height: 20px;
-  width: 20px;
-}
+// img {
+//   height: 20px;
+//   width: 20px;
+// }
 
-.maincontent {
+.gridcard {
   // position: scroll;
   // position: sticky;
   // top: 100px;
   background-color: $main-grid;
+  overflow: scroll;
 }
