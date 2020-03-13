@@ -5,20 +5,30 @@ $paceholder-text: #5c5b5b;
 .body {
   font-family: Helvetica;
   color: $font-color;
-  background-color: black;
-  max-width: 768px;
-  max-height: 600px;
+  // background-color: green;
+  display: grid;
+  grid-template-columns: 100%px;
+  grid-template-rows: 100%;
+  // max-width: 768px;
+  // max-height: 600px;
+  margin: 0px;
+  // padding: 0px;
   // height: 700px;
 
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 6fr 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: 6fr 1fr;
+  border: red 1px dotted;
 }
 
 .firstgrid {
+  width: 100%;
+  top: 0%;
+  margin: 0%;
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100%;
+  margin: 0px;
   border: blue 1px dotted;
 }
 
@@ -91,16 +101,14 @@ li {
 
 .bottom-nav {
   display: flex;
-
   flex-direction: column;
   align-items: center;
 }
 
 .navtext-bottom {
   font-size: 12px;
-
   letter-spacing: 1.5px;
-  padding-bottom: 4px;
+  padding-bottom: 12px;
   color: $font-color;
   opacity: 0.5;
   text-decoration: none;
@@ -109,8 +117,7 @@ li {
 
 .navtext-bottom:hover {
   text-decoration: underline;
-  color: $font-color;
-  opacity: 0.5;
+
   width: 60px;
 }
 
@@ -124,27 +131,35 @@ li {
 // --------------------------------------maincontent
 
 .maincontent {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 15fr;
+  background-color: $main-grid;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 // -------------------------------------header
 
 .header {
-  position: relative;
-  background-color: khaki;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: $main-grid;
+  position: fixed;
+  top: 0%;
+  width: 800px;
+  background-color: black;
   padding: 20px;
+  overflow: hidden;
 }
 
 .search {
   box-sizing: border-box;
   border-radius: 30px;
   line-height: 16px;
-  font-size: 10px;
-  min-width: 80px;
+  font-size: 8px;
+  min-width: 230px;
   min-height: 30px;
   padding-left: 30px;
+  padding-right: 5px;
   border: none;
   letter-spacing: 1px;
   color: $paceholder-text;
@@ -157,29 +172,174 @@ input::placeholder {
 }
 
 .search-black {
-  position: absolute;
+  position: fixed;
   top: 26px;
-  left: 27px;
+  left: 237px;
   width: 17px;
   height: 17px;
+}
+
+.button {
+  box-sizing: border-box;
+  border-radius: 30px;
+  line-height: 16px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  border: none;
+  width: 110px;
+}
+
+.button--black {
+  background-color: black;
+  color: white;
+  .button--black:hover {
+  }
+}
+
+.button--white {
+  color: black;
+  background-color: white;
+}
+
+// -----------------------------------main-grid
+
+.gridcard {
+  // left: 193px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 200px);
+  grid-gap: 20px;
+  padding-left: 5px;
+
+  // height: 530px;
+  // max-width: 575px;
+  // min-width: 575px;
+  background-color: yellow;
+}
+
+h1 {
+  background-color: $main-grid;
+  grid-area: 1/1/2/6;
+}
+.card {
+  border-radius: 30px;
+  padding-left: 40px;
+}
+// first row--------------
+
+.card--podcast {
+  grid-area: 2/1/3/2;
+  background-color: #a2a2e6;
+}
+
+.card--skapat {
+  grid-area: 2/2/3/3;
+  background-color: #7ddac4;
+}
+
+.card--topplista {
+  grid-area: 2/3/3/4;
+  background-color: #e0bb93;
+}
+
+.card--nya {
+  grid-area: 2/4/3/5;
+  background-color: #bce093;
+}
+
+.card--upptäck {
+  grid-area: 2/5/3/6;
+  background-color: #e093df;
+}
+
+// second row ------------------------------
+
+.card--pop {
+  grid-area: 3/1/4/2;
+  background-color: #ece8a8;
+}
+
+.card--hiphop {
+  grid-area: 3/2/4/3;
+  background-color: #7d9cda;
+}
+
+.card--humör {
+  grid-area: 3/3/4/4;
+  background-color: #98cb93;
+}
+
+.card--amplify {
+  grid-area: 3/4/4/5;
+  background-color: #b19387;
+}
+
+.card--chill {
+  grid-area: 3/5/4/6;
+  background-color: #f0d0ef;
+}
+
+// third row-----------------------
+
+.card--party {
+  grid-area: 4/1/5/2;
+  background-color: #a195ac;
+}
+
+.card--indie {
+  grid-area: 4/2/5/3;
+  background-color: #ae8288;
+}
+
+.card--black {
+  grid-area: 4/3/5/4;
+  background-color: #93c1cb;
+}
+
+.card--träning {
+  grid-area: 4/4/5/5;
+  background-color: #f0e6b0;
+}
+
+.card--dance {
+  grid-area: 4/5/5/6;
+  background-color: #649b67;
+}
+
+// last row----------------------
+
+.card--rnb {
+  grid-area: 5/1/6/2;
+  background-color: #943be7;
+}
+
+.card--rock {
+  grid-area: 5/2/6/3;
+  background-color: #558ca4;
+}
+
+.card--wellness {
+  grid-area: 5/3/6/4;
+  background-color: #b37254;
+}
+
+.card--barn {
+  grid-area: 5/4/6/5;
+  background-color: #f062b5;
+}
+
+.card--metal {
+  grid-area: 5/5/6/6;
+  background-color: #5a70df;
 }
 
 // --------------------------------resten
 
 footer {
   background-color: khaki;
-  position: sticky;
-}
-
-// img {
-//   height: 20px;
-//   width: 20px;
-// }
-
-.gridcard {
-  // position: scroll;
-  // position: sticky;
-  // top: 100px;
-  background-color: $main-grid;
-  overflow: scroll;
+  position: fixed;
+  height: 130px;
+  width: 100%;
+  bottom: 0%;
 }
