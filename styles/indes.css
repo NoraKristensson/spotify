@@ -6,7 +6,7 @@
   grid-template-columns: 100% px;
   grid-template-rows: 100%;
   margin: 0px;
-  background-color: black;
+  border: red 1px dotted;
 }
 
 .firstgrid {
@@ -14,14 +14,13 @@
   top: 0%;
   margin: 0%;
   display: grid;
-  grid-template-columns: 1fr, 5fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100%;
   margin: 0px;
+  border: blue 1px dotted;
 }
 
 .sidebar {
-  position: fixed;
-  top: 0;
   background-color: black;
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +28,7 @@
   justify-content: space-between;
   padding-left: 20px;
   padding-top: 30px;
-  padding-bottom: 140px;
+  padding-bottom: 40px;
   padding-right: 0px;
   margin-right: 0px;
   color: #ffffff;
@@ -86,7 +85,6 @@ li {
 }
 
 .bottom-nav {
-  margin-top: 165px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,54 +114,31 @@ li {
 
 .maincontent {
   background-color: #1d1c1c;
-  grid-area: 1/2/2/6;
   box-sizing: border-box;
-  overflow: scroll;
-  right: 0%;
-  margin-left: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 5% 40% 15% 15% 15%;
+  display: flex;
+  justify-content: space-around;
   flex-wrap: #1d1c1c;
   position: fixed;
   top: 0%;
-  left: 220px;
-  width: 100%;
+  width: 800px;
   background-color: black;
-  padding-right: 20px;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.arrows {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 2px;
-}
-
-.left-right {
-  width: 13px;
-  height: 13px;
-}
-
-.left-right:hover {
-  width: 17px;
-  height: 17px;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .search {
   box-sizing: border-box;
   border-radius: 30px;
-  line-height: 28px;
-  font-size: 12px;
-  min-width: 350px;
-  min-height: 40px;
-  margin-left: 20px;
-  padding-left: 40px;
+  line-height: 16px;
+  font-size: 8px;
+  min-width: 230px;
+  min-height: 30px;
+  padding-left: 30px;
   padding-right: 5px;
   border: none;
   letter-spacing: 1px;
@@ -178,8 +153,8 @@ input::placeholder {
 
 .search-black {
   position: fixed;
-  top: 30px;
-  left: 330px;
+  top: 26px;
+  left: 237px;
   width: 17px;
   height: 17px;
 }
@@ -191,34 +166,26 @@ input::placeholder {
   font-size: 10px;
   letter-spacing: 2px;
   border: none;
-  width: 150px;
-  transition: transform;
-}
-
-.button:hover {
-  transform: scale(1.1);
+  width: 110px;
 }
 
 .button--black {
   background-color: black;
   color: white;
 }
-
 .button--white {
   color: black;
   background-color: white;
 }
 
 .gridcard {
-  margin-top: 80px;
+  margin-top: 100px;
   display: grid;
-  grid-template-columns: 19.2% 19.2% 19.2% 19.2% 19.2% 20px;
-  grid-template-rows: 100px 200px 200px 200px 200px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 200px);
   grid-gap: 20px;
-  padding-bottom: 170px;
-  margin-left: 20px;
-  margin-right: 30px;
-  background-color: #1d1c1c;
+  padding-left: 5px;
+  background-color: yellow;
 }
 
 h1 {
@@ -227,12 +194,8 @@ h1 {
 }
 
 .card {
-  border-radius: 10px;
-  padding-left: 15px;
-}
-
-.card:hover {
-  cursor: pointer;
+  border-radius: 30px;
+  padding-left: 40px;
 }
 
 .card--podcast {
@@ -336,98 +299,11 @@ h1 {
 }
 
 footer {
-  background-color: black;
+  background-color: khaki;
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 130px;
   width: 100%;
-  padding-left: 5px;
   bottom: 0%;
 }
 
-.middle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.empty {
-  width: 250px;
-}
-
-.player {
-  opacity: 0.5;
-  display: flex;
-  justify-content: space-between;
-}
-
-.player--song:hover {
-  opacity: 1;
-}
-
-.player--top {
-  width: 300px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 30px;
-  align-items: center;
-}
-
-.radio {
-  height: 15px;
-  width: 15px;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.radio:hover {
-  opacity: 1;
-}
-
-.radio--play {
-  height: 25px;
-  width: 25px;
-  opacity: 0.5;
-}
-
-.radio--play:hover {
-  opacity: 1;
-}
-
-.player--song {
-  width: 600px;
-  font-size: 12px;
-  align-items: center;
-}
-
-.timeline {
-  height: 2px;
-  background-color: white;
-  border-radius: 30px;
-}
-
-.timeline--player {
-  width: 520px;
-}
-
-.volume {
-  display: flex;
-  align-items: center;
-  margin-right: 25px;
-  opacity: 0.7;
-}
-
-.volume:hover {
-  opacity: 1;
-}
-
-.timeline--speaker {
-  width: 100px;
-  height: 4px;
-  margin-right: 5px;
-  margin-left: 10px;
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=indes.css.map */

@@ -48,6 +48,10 @@
 
       <main class="maincontent">
         <div class="header">
+          <div class="arrows">
+            <img class="left-right" src="img/left-arrow.svg" alt="" />
+            <img class="left-right" src="img/right-arrow.svg" alt="" />
+          </div>
           <label for="searchbox">
             <img class="search-black" src="img/search-black.svg" alt="" />
 
@@ -57,8 +61,8 @@
               placeholder="Leta efter artister, låtar eller podcasts"
             />
           </label>
-          <button class="button button--black">Registrera dig</button>
-          <button class="button button--white">Logga in</button>
+          <button class="button button--black">REGISTRERA DIG</button>
+          <button class="button button--white">LOGGA IN</button>
         </div>
 
         <div class="gridcard">
@@ -90,7 +94,7 @@
             <h2 class="card__title">Humör</h2>
           </div>
           <div class="card card--amplify">
-            <h2 class="card__title">Amplify:Women's History Month</h2>
+            <h2 class="card__title">Amplify: Women's History Month</h2>
           </div>
           <div class="card card--chill">
             <h2 class="card__title">Chill</h2>
@@ -108,7 +112,7 @@
             <h2 class="card__title">Träning</h2>
           </div>
           <div class="card card--dance">
-            <h2 class="card__title">Electronic/Dance</h2>
+            <h2 class="card__title">Electronic/ Dance</h2>
           </div>
           <div class="card card--rnb">
             <h2 class="card__title">R&B</h2>
@@ -130,7 +134,26 @@
     </div>
 
     <footer>
-      lalalalalal
+      <div class="empty"></div>
+      <div class="middle">
+        <div class="player player--top">
+          <img class="radio" src="img/shuffle.svg" alt="" />
+          <img class="radio" src="img/previous (1).svg" alt="" />
+          <img class="eadio radio--play" src="img/play-button.svg" alt="" />
+          <img class="radio" src="img/forward.svg" alt="" />
+          <img class="radio" src="img/repeat (1).svg" alt="" />
+        </div>
+        <div class="player player--song">
+          <span>00:00</span>
+          <div class="timeline timeline--player"></div>
+          <span>00:00</span>
+        </div>
+      </div>
+
+      <div class="volume">
+        <img class="radio" src="img/volume.svg" alt="" />
+        <div class="timeline timeline--speaker"></div>
+      </div>
     </footer>
   </body>
 </html>
