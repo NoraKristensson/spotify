@@ -47,7 +47,7 @@
   margin-bottom: 20px;
 }
 
-ul {
+.navigation {
   padding-left: 2px;
 }
 
@@ -63,7 +63,7 @@ ul {
   height: 20px;
 }
 
-li {
+.navlink {
   padding-bottom: 2px;
   margin-top: 7px;
   margin-bottom: 7px;
