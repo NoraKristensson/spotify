@@ -28,7 +28,6 @@ $paceholder-text: #5c5b5b;
 .sidebar {
   position: fixed;
   top: 0;
-  background-color: black;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -225,6 +224,7 @@ input::placeholder {
 
 .gridcard {
   margin-top: 80px;
+  // padding-left: 40px;
   display: grid;
   grid-template-columns: 19.2% 19.2% 19.2% 19.2% 19.2% 20px;
   grid-template-rows: 100px 200px 200px 200px 200px;
